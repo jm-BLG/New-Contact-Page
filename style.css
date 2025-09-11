@@ -15,7 +15,7 @@ body {
     outline: 1px solid red;
 }
 
-.btn-presta{
+.btn-presta {
     text-align: center;
     white-space: nowrap;
     vertical-align: middle;
@@ -41,7 +41,7 @@ body {
     text-decoration: none;
 }
 
-.btn-presta:hover{
+.btn-presta:hover {
     padding-left: 21px !important;
     padding-right: 37px !important;
     transition: all 100ms ease-out;
@@ -64,6 +64,8 @@ body {
     transform: translateX(-6px);
 }
 
+/* ----------------------------- */
+
 .lo-cms-contact {
     width: min(1520px, 100%);
     margin-inline: auto;
@@ -84,6 +86,14 @@ body {
 .lo-cms-content {
     width: calc(100% - 140px);
     margin-inline: auto;
+
+    @media (width < 1440px) {
+        width: calc(100% - (clamp(2.5rem, -4.6429rem + 14.881vw, 8.75rem)));
+    }
+
+    @media (width < 425px) {
+        width: 100%;
+    }
 }
 
 .lo-cms-full-width {
@@ -126,7 +136,7 @@ body {
     padding-block: 42px 50px;
 }
 
-.lo-cms-txtBlock--left{
+.lo-cms-txtBlock--left {
     text-align: left;
 }
 
@@ -136,17 +146,78 @@ body {
     text-align: center;
 }
 
-.lo-cms-section__subtitle {
-    font: 400 16px/1 "Plus Jakarta Sans", sans-serif;
+.lo-cms-section__desc {
+    font: 400 16px/1.5 "Plus Jakarta Sans", sans-serif;
     margin: 0;
     text-align: center;
+
+    /* @media (width < 768px) {
+        font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem);
+    } */
 }
 
+.lo-cms-grid {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
+    padding-block-end: 50px;
+
+    @media (width < 1440px) {
+        justify-content: center;
+    }
+
+    @media (width < 1240px) {
+        flex-wrap: wrap;
+    }
+}
+
+.lo-cms-grid__item {
+    flex: 0 1 23%;
+    height: 100%;
+    padding-block: 55px 30px;
+    padding-inline: 10px;
+    border-radius: 34px;
+    border: none;
+    background: #F4F4F4;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 20px;
+
+    @media (width < 1440px) {
+        flex: 1 1 45%;
+    }
+
+    @media (width < 425px) {
+        flex: 1 1 55%;
+    }
+
+}
+
+.lo-cms-grid__icon {
+    width: 50px;
+    height: 50px;
+}
+
+.lo-cms-grid__title {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.lo-cms-grid__desc {
+    font-weight: 500;
+    width: 22ch;
+    text-wrap: balance;
+}
 
 .lo-cms-grid__btm {
     border: 1px solid #000;
     color: #000;
     background: transparent;
+    text-wrap: nowrap;
 }
 
 
@@ -169,6 +240,8 @@ body {
     appearance: none;
     -webkit-appearance: none;
     text-decoration: none;
+    user-select: none;
+    white-space: nowrap;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -207,7 +280,7 @@ body {
     justify-content: center;
     align-items: flex-start;
     padding-block-end: 40px;
-    width: min(1100px, 100%);
+    width: min(1000px, 100%);
     margin-inline: auto;
     gap: 30px;
 }
@@ -217,8 +290,8 @@ body {
     text-align: center;
 }
 
-.lo-cms-timeInfo__info{
-margin-block: 0 15px;
+.lo-cms-timeInfo__info {
+    margin-block: 0 15px;
 }
 
 .lo-cms-timeInfo__houors {
@@ -235,7 +308,7 @@ margin-block: 0 15px;
     line-height: 1.5;
 }
 
-.lo-cms-formBlock{
+.lo-cms-formBlock {
     padding-block: 42px 50px;
     display: flex;
     flex-direction: column;
@@ -244,35 +317,33 @@ margin-block: 0 15px;
     align-items: flex-start;
 }
 
-.lo-cms-formBlock .lo-cms-section__title{
+.lo-cms-formBlock .lo-cms-section__title {
     margin-block-end: 22px;
 }
 
-.lo-cms-formContent{
+.lo-cms-formContent {
     width: 100%;
     display: flex;
     gap: 25px;
     justify-content: space-between;
 }
 
-.lo-cms-formDesc__wrapper{
+.lo-cms-formDesc__wrapper {
     flex: 0 1 60%;
 }
 
-.lo-cms-formDesc{
+.lo-cms-formDesc {
     line-height: 1.5;
     margin: 0;
 }
 
 
-.lo-cms-addInfo__wrapper{
+.lo-cms-addInfo__wrapper {
     flex: 0 1 37%;
 }
 
-.lo-cms-addInfo{
+.lo-cms-addInfo {
     color: #717171;
     line-height: 1.5;
     margin: 0;
 }
-
-
