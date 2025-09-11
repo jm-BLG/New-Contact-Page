@@ -169,3 +169,45 @@ margin-block: 0 15px;
     margin: 0;
     line-height: 1.5;
 }
+
+.lo-cms-formBlock{
+    padding-block: 42px 50px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.lo-cms-formBlock .lo-cms-section__title{
+    margin-block-end: 22px;
+}
+
+.lo-cms-formContent{
+    width: 100%;
+    display: flex;
+    gap: 25px;
+    justify-content: space-between;
+}
+
+.lo-cms-formDesc__wrapper{
+    flex: 0 1 60%;
+}
+
+.lo-cms-formDesc{
+    line-height: 1.5;
+    margin: 0;
+}
+
+
+.lo-cms-addInfo__wrapper{
+    flex: 0 1 37%;
+}
+
+.lo-cms-addInfo{
+    color: #717171;
+    line-height: 1.5;
+    margin: 0;
+}
+
+
