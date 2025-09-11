@@ -1,0 +1,63 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+/* Symulacja contenera presty */
+body {
+    width: 100%;
+    max-width: 1550px;
+    margin-inline: auto;
+    padding-inline: 15px;
+    outline: 1px solid red;
+}
+
+.lo-cms-contact{
+    width: min(1520px, 100%);
+    margin-inline: auto;
+    font: 400 16px/1 "Plus Jakarta Sans", sans-serif;
+    position: relative;
+}
+
+.lo-cms-header{
+    width: 100%;
+    display: grid;
+}
+
+.lo-cms-bg{
+    background: #F4F4F4;
+}
+
+.lo-cms-content{
+    width: calc(100% - 140px);
+    margin-inline: auto;
+}
+
+.lo-cms-full-width{
+    width: 100%;
+}
+
+
+.lo-cms-header__img{
+    width: 100%;
+}
+
+.lo-cms-header__picture{
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 1;
+}
+
+
+.lo-cms-header__content {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    z-index: 2;
+    display: grid;
+    place-items: center;
+    font: 500 40px/1 "Red Hat Display", sans-serif;
+    color: #fff;
+}
