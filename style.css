@@ -125,6 +125,14 @@ body {
     font: 500 40px/1 "Red Hat Display", sans-serif;
     color: #fff;
     margin: 0;
+    text-align: center;
+}
+
+.lo-cms-header__subtitle {
+    font: 500 24px/1 "Red Hat Display", sans-serif;
+    color: #fff;
+    text-align: center;
+    margin: 15px 0 0;
 }
 
 .lo-cms-txtBlock {
