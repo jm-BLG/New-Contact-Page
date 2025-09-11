@@ -77,6 +77,10 @@ body {
     padding-block: 42px 50px;
 }
 
+.lo-cms-txtBlock--left{
+    text-align: left;
+}
+
 .lo-cms-section__title {
     font: 600 32px/1 "Red Hat Display", sans-serif;
     margin: 0;
@@ -87,4 +91,81 @@ body {
     font: 400 16px/1 "Plus Jakarta Sans", sans-serif;
     margin: 0;
     text-align: center;
+}
+
+.lo-cms-buttonsWrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-block-end: 50px;
+    width: min(1000px, 100%);
+    margin-inline: auto;
+}
+
+.lo-cms-button {
+    appearance: none;
+    -webkit-appearance: none;
+    text-decoration: none;
+    width: fit-content;
+    border: 1px solid #000;
+    border-radius: 23px;
+    background: transparent;
+    color: #000;
+    font-size: 24px;
+    text-align: center;
+    line-height: 1  ;
+    margin: 0;
+    padding: 8px 40px 10px;
+    flex: 0 1 309px;
+    transition: color 450ms ease-in-out, background 450ms ease-in-out;
+}
+
+.lo-cms-button:hover {
+    background: #000;
+    color: #fff;
+}
+
+.lo-cms-button--black {
+    background: #000;
+    color: #fff;
+}
+
+.lo-cms-button--black:hover {
+    color: #000;
+    background: #fff;
+}
+
+.lo-cms-timeInfo {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding-block-end: 40px;
+    width: min(1100px, 100%);
+    margin-inline: auto;
+    gap: 30px;
+}
+
+.lo-cms-timeInfo__item {
+    flex: 1 1 50%;
+    text-align: center;
+}
+
+.lo-cms-timeInfo__info{
+margin-block: 0 15px;
+}
+
+.lo-cms-timeInfo__houors {
+    font-weight: 600;
+    font-size: 20px;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.lo-cms-timeInfo__days {
+    font-weight: 600;
+    font-size: 16px;
+    margin: 0;
+    line-height: 1.5;
 }
