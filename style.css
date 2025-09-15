@@ -80,7 +80,7 @@ body {
     display: grid;
 }
 
-.lo-cms-main{
+.lo-cms-main {
     width: min(1520px, 100%);
     margin-inline: auto;
 }
@@ -93,7 +93,7 @@ body {
     padding-block: 42px 50px;
 }
 
-.lo-cms-text-balance{
+.lo-cms-text-balance {
     text-wrap: balance;
 }
 
@@ -129,7 +129,7 @@ body {
     }
 }
 
-.lo-cms-overlay{
+.lo-cms-overlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -139,11 +139,11 @@ body {
     z-index: 4;
     /* width: 100%; */
     /* height: 100%; */
-        opacity: 0;
+    opacity: 0;
     visibility: hidden;
 }
 
-.lo-cms-popup__wrapper{
+.lo-cms-popup__wrapper {
     position: fixed;
     top: 0;
     left: 0;
@@ -155,12 +155,12 @@ body {
     transition: all 450ms ease-out;
 }
 
-.lo-cms-popup__wrapper.open{
+.lo-cms-popup__wrapper.open {
     opacity: 1;
     visibility: visible;
 }
 
-.lo-cms-popup{
+.lo-cms-popup {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -178,11 +178,22 @@ body {
 
 }
 
-.lo-cms-popup__header{
-    width: 1005;
+.lo-cms-popup:has(.lo-cms-contactForm__wrapper) {
+    width: min(1030px, calc(100% - 20px));
 }
 
-.lo-cms-popup__closeBtn{
+.lo-cms-popup:has(.lo-cms-grid--chats) {
+    @media (width < 1024px) {
+        width: min(505px, calc(100% - 20px));
+    }
+}
+
+.lo-cms-popup__header {
+    width: 100%;
+    margin-block-end: 40px;
+}
+
+.lo-cms-popup__closeBtn {
     appearance: none;
     -webkit-appearance: none;
     background: none;
@@ -194,9 +205,20 @@ body {
     cursor: pointer;
 }
 
-.lo-cms-popup__closeIcon{
+.lo-cms-popup__closeIcon {
     font-size: 24px;
     margin: 0;
+}
+
+.lo-cms-popup__header .lo-cms-section__desc {
+    margin-block-start: 20px;
+}
+
+.lo-cms-popup--chats .lo-cms-popup__statement{
+    width: 100%;
+    font-size: 11px;
+    line-height: 18px;
+    color: #717171;
 }
 
 .lo-cms-header__img {
@@ -242,7 +264,7 @@ body {
     padding-block: 42px 50px;
 }
 
-.lo-cms-txtBlock--w50{
+.lo-cms-txtBlock--w50 {
     width: min(55ch, 100%);
 }
 
@@ -300,10 +322,14 @@ body {
     }
 }
 
-.lo-cms-grid--noBg{
+.lo-cms-grid--noBg {
     gap: 10px;
     align-items: stretch;
     height: 100%;
+}
+
+.lo-cms-grid--chats {
+    justify-content: center;
 }
 
 .lo-cms-grid__item {
@@ -329,25 +355,32 @@ body {
     }
 }
 
-.lo-cms-grid__item--noBg{
+.lo-cms-grid__item--noBg {
     background: transparent;
     gap: 40px;
     padding-block: 20px;
     flex: 0 1 24%;
     height: auto;
 
-        @media (width < 1440px) {
+    @media (width < 1440px) {
         flex: 1 1 45%;
     }
 
-        @media (width < 549px) {
+    @media (width < 549px) {
         flex: 1 1 55%;
         gap: 20px;
     }
-
 }
 
-.lo-cms-grid__itemHeader{
+.lo-cms-grid__item--chats {
+    flex: 0 0 309px;
+
+    @media (width < 425px) {
+        flex: 0 1 309px;
+    }
+}
+
+.lo-cms-grid__itemHeader {
     width: 100%;
     height: 198px;
     border-radius: 34px;
@@ -379,7 +412,7 @@ body {
     text-wrap: balance;
 }
 
-.lo-cms-grid__item--noBg .lo-cms-grid__desc{
+.lo-cms-grid__item--noBg .lo-cms-grid__desc {
     width: 100%;
     text-wrap: auto;
 }
@@ -394,15 +427,15 @@ body {
 }
 
 #lo-cms-infoPage .lo-cms-linkMore {
-color: #E87025;
-text-decoration: none;
-font-weight: 600;
-margin-block-start: auto;
-cursor: pointer;
-transition: opacity 450ms ease-out;
+    color: #E87025;
+    text-decoration: none;
+    font-weight: 600;
+    margin-block-start: auto;
+    cursor: pointer;
+    transition: opacity 450ms ease-out;
 }
 
-#lo-cms-infoPage .lo-cms-linkMore:hover{
+#lo-cms-infoPage .lo-cms-linkMore:hover {
     opacity: 0.8;
 }
 
@@ -449,6 +482,7 @@ transition: opacity 450ms ease-out;
     margin: 0;
     padding: 8px 40px;
     flex: 0 1 309px;
+    cursor: pointer;
     transition: color 450ms ease-in-out, background 450ms ease-in-out;
 
     @media (width < 425px) {
@@ -622,7 +656,7 @@ transition: opacity 450ms ease-out;
     }
 }
 
-.lo-cms-3colGrid__item .lo-cms-grid__icon{
+.lo-cms-3colGrid__item .lo-cms-grid__icon {
     width: 40px;
     height: 40px;
 }
@@ -654,13 +688,13 @@ transition: opacity 450ms ease-out;
     opacity: 0.8;
 }
 
-.lo-cms-logoWrapper{
+.lo-cms-logoWrapper {
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: flex-end;
 
-    @media (width < 768px){
+    @media (width < 768px) {
         justify-content: center;
     }
 }

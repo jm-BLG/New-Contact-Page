@@ -75,7 +75,7 @@
                     </p>
                 </div>
                 <div class="lo-cms-buttonsWrapper">
-                    <a class="lo-cms-button lo-cms-button--black" href="#">Chat online</a>
+                    <button class="lo-cms-button lo-cms-button--black" id="loCmsChatSelectBtn" aria-expanded="false" aria-controls="loCmsChatSelect">Chat online</button>
                     <a class="lo-cms-button" href="mailto:sklep@lionelo.pl">sklep@lionelo.pl</a>
                     <a class="lo-cms-button" href="tel:+48 61 222 29 80">61 222 29 80</a>
                 </div>
@@ -117,7 +117,8 @@
             aria-labelledby="loCmsNewMsgBtn">
             <div class="lo-cms-popup">
                 <div class="lo-cms-popup__header">
-                    <button class="lo-cms-popup__closeBtn js-loCmsPopUpCloseBtn" aria-expanded="true" aria-controls="loCmsNewMsgForm">
+                    <button class="lo-cms-popup__closeBtn js-loCmsPopUpCloseBtn" aria-expanded="true"
+                        aria-controls="loCmsNewMsgForm">
                         <i class="material-icons lo-cms-popup__closeIcon"></i>
                     </button>
                     <h3 class="lo-cms-section__title">
@@ -125,6 +126,31 @@
                     <p class="lo-cms-section__desc">Zostaw nam wiadomość, odpowiemy najszybciej, jak to możliwe.
                     </p>
                 </div>
+            </div>
+        </div>
+        <div class="lo-cms-popup__wrapper js-loCmsPopUp" id="loCmsChatSelect" aria-hidden="true" role="dialog"
+            aria-labelledby="loCmsChatSelectBtn">
+            <div class="lo-cms-popup lo-cms-popup--chats">
+                <div class="lo-cms-popup__header">
+                    <button class="lo-cms-popup__closeBtn js-loCmsPopUpCloseBtn" aria-expanded="true"
+                        aria-controls="loCmsNewMsgForm">
+                        <i class="material-icons lo-cms-popup__closeIcon"></i>
+                    </button>
+                    <h3 class="lo-cms-section__title"> Wybierz formę kontatku na chacie</h3>
+                </div>
+                <div class="lo-cms-grid lo-cms-grid--chats">
+                    <div class="lo-cms-grid__item">
+                        <img class="lo-cms-grid__icon" src="/img/messenger.png" width="72px" height="72px" alt="">
+                        <div class="lo-cms-grid__title">Facebook messenger</div>
+                        <a class="btn-presta lo-cms-grid__btn" href="#">Rozpocznij rozmowę</a>
+                    </div>
+                    <div class="lo-cms-grid__item">
+                        <img class="lo-cms-grid__icon" src="/img/whatsapp.png" width="72px" height="72px" alt="">
+                        <div class="lo-cms-grid__title">WhatsApp chat</div>
+                        <a class="btn-presta lo-cms-grid__btn" href="#">Rozpocznij rozmowę</a>
+                    </div>
+                </div>
+                <p class="lo-cms-section__desc lo-cms-popup__statement">Korzystając z opcji Zadaj pytanie (Messenger) oraz Chat on WhatsApp zgadzasz się na przetwarzanie swoich danych osobowych przez BrandLine Group Sp. z o.o. z siedzibą w Poznaniu ul. Kręglewskiego 1 w celu udzielenia odpowiedzi na wiadomości przesyłane drogą elektroniczną oraz zgadzasz się z polityką prywatności podmiotów świadczących usługę. Więcej: <a href="https://www.whatsapp.com/legal/" target="_blank" rel="noopener">https://www.whatsapp.com/legal/</a> oraz <a href="https://www.messenger.com/privacy" target="_blank" rel="noopener">https://www.messenger.com/privacy</a>.</p>
             </div>
         </div>
 
