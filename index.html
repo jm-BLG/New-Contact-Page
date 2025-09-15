@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Kontakt</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -14,10 +14,11 @@
         href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="/style.css">
+    <script src="/script.js" defer></script>
 </head>
 
 <body>
-    <section class="lo-cms-contact lo-cms-page">
+    <section class="lo-cms-infoPage lo-cms-page" id="lo-cms-infoPage">
         <header class="lo-cms-header">
             <picture class="lo-cms-header__picture">
                 <source srcset="/img/header.jpg">
@@ -36,28 +37,30 @@
         <section class="lo-cms-content">
             <div class="lo-cms-grid">
                 <div class="lo-cms-grid__item">
-                    <img class="lo-cms-grid__icon" src="/img/gwarancja.png" width="50px" height="50px" alt="">
+                    <img class="lo-cms-grid__icon" src="/img/dozywotnia_gwarancja.png" width="72px" height="72px"
+                        alt="">
+                    <div class="lo-cms-grid__title">Formularz kontaktowy</div>
+                    <p class="lo-cms-section__desc lo-cms-grid__desc">Potrzebujesz szybo się skontaktować?</p>
+                    <button class="btn-presta lo-cms-grid__btn js-loCmsPopUpBtn" id="loCmsNewMsgBtn"
+                        aria-expanded="false" aria-controls="loCmsNewMsgForm">Napisz wiadomość</button>
+                </div>
+                <div class="lo-cms-grid__item">
+                    <img class="lo-cms-grid__icon" src="/img/wymiana_fotelika.png" width="72px" height="72px" alt="">
                     <div class="lo-cms-grid__title">Twoje zamówienie</div>
                     <p class="lo-cms-section__desc lo-cms-grid__desc">Masz pytania o status, dostawę lub płatność?</p>
-                    <a class="btn-presta lo-cms-grid__btm" href="#">Sprawdź status zamówienia</a>
+                    <a class="btn-presta lo-cms-grid__btn" href="#">Sprawdź status zamówienia</a>
                 </div>
                 <div class="lo-cms-grid__item">
-                    <img class="lo-cms-grid__icon" src="/img/gwarancja.png" width="50px" height="50px" alt="">
+                    <img class="lo-cms-grid__icon" src="/img/produkt_zastepczy.png" width="72px" height="72px" alt="">
                     <div class="lo-cms-grid__title">Zwrot produktu</div>
-                    <p class="lo-cms-section__desc lo-cms-grid__desc">Chcesz zwrócić zakupiony produkt?</p>
-                    <a class="btn-presta lo-cms-grid__btm" href="#">Zwróć produkt</a>
+                    <p class="lo-cms-section__desc lo-cms-grid__desc">Chcesz zwrócić lub wymienić zakupiony produkt?</p>
+                    <a class="btn-presta lo-cms-grid__btn" href="#">Zwróć produkt</a>
                 </div>
                 <div class="lo-cms-grid__item">
-                    <img class="lo-cms-grid__icon" src="/img/gwarancja.png" width="50px" height="50px" alt="">
+                    <img class="lo-cms-grid__icon" src="/img/door_to_door.png" width="72px" height="72px" alt="">
                     <div class="lo-cms-grid__title">Reklamacja</div>
                     <p class="lo-cms-section__desc lo-cms-grid__desc">Napotkałeś problem ze swoim produktem? </p>
-                    <a class="btn-presta lo-cms-grid__btm" href="#">Zgłoś reklamację</a>
-                </div>
-                <div class="lo-cms-grid__item">
-                    <img class="lo-cms-grid__icon" src="/img/gwarancja.png" width="50px" height="50px" alt="">
-                    <div class="lo-cms-grid__title">Produkty Lionelo</div>
-                    <p class="lo-cms-section__desc lo-cms-grid__desc">Potrzebujesz pomocy przy montażu lub instrukcji obsługi?</p>
-                    <a class="btn-presta lo-cms-grid__btm" href="#">Znajdź pomoc</a>
+                    <a class="btn-presta lo-cms-grid__btn" href="#">Zgłoś reklamację</a>
                 </div>
             </div>
         </section>
@@ -109,6 +112,21 @@
             </div>
 
         </section>
+        <div class="lo-cms-overlay"></div>
+        <div class="lo-cms-popup__wrapper js-loCmsPopUp" id="loCmsNewMsgForm" aria-hidden="true" role="dialog"
+            aria-labelledby="loCmsNewMsgBtn">
+            <div class="lo-cms-popup">
+                <div class="lo-cms-popup__header">
+                    <button class="lo-cms-popup__closeBtn js-loCmsPopUpCloseBtn" aria-expanded="true" aria-controls="loCmsNewMsgForm">
+                        <i class="material-icons lo-cms-popup__closeIcon"></i>
+                    </button>
+                    <h3 class="lo-cms-section__title">
+                        Formularz kontaktowy</h3>
+                    <p class="lo-cms-section__desc">Zostaw nam wiadomość, odpowiemy najszybciej, jak to możliwe.
+                    </p>
+                </div>
+            </div>
+        </div>
 
     </section>
 </body>
