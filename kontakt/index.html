@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="/script.js" defer></script>
+</head>
+
+<body>
+    <section class="lo-cms-infoPage lo-cms-page" id="lo-cms-infoPage">
+        <header class="lo-cms-header">
+            <picture class="lo-cms-header__picture">
+                <source srcset="/img/header.jpg" media="(min-width: 590px)">
+                <source srcset="/img/header-mobile.jpg" media="(max-width: 589px)">
+                <img class="lo-cms-header__img" src="/img/header.jpg" alt="">
+            </picture>
+            <div class="lo-cms-header__content" >
+                <h2 class="lo-cms-header__title">Kontakt</h2>
+            </div>
+        </header>
+        <section class="lo-cms-content lo-cms-txtBlock lo-cms-block-pd">
+            <h3 class="lo-cms-section__title">
+                Jak możemy Ci pomóc?
+            </h3>
+            <p class="lo-cms-section__desc">Wybierz temat, który Cię interesuje, a my pokierujemy Cię dalej.</p>
+        </section>
+        <section class="lo-cms-content lo-cms-block-pde-50">
+            <div class="lo-cms-grid">
+                <div class="lo-cms-grid__item">
+                    <img class="lo-cms-grid__icon" src="/img/dozywotnia_gwarancja.png" width="72px" height="72px"
+                        alt="">
+                    <div class="lo-cms-grid__title">Formularz kontaktowy</div>
+                    <p class="lo-cms-section__desc lo-cms-grid__desc">Potrzebujesz szybo się skontaktować?</p>
+                    <button class="btn-presta lo-cms-grid__btn js-loCmsPopUpBtn" id="loCmsNewMsgBtn"
+                        aria-expanded="false" aria-controls="loCmsNewMsgForm">Napisz wiadomość</button>
+                </div>
+                <div class="lo-cms-grid__item">
+                    <img class="lo-cms-grid__icon" src="/img/wymiana_fotelika.png" width="72px" height="72px" alt="">
+                    <div class="lo-cms-grid__title">Twoje zamówienie</div>
+                    <p class="lo-cms-section__desc lo-cms-grid__desc">Masz pytania o status, dostawę lub płatność?</p>
+                    <a class="btn-presta lo-cms-grid__btn" href="#">Sprawdź status zamówienia</a>
+                </div>
+                <div class="lo-cms-grid__item">
+                    <img class="lo-cms-grid__icon" src="/img/produkt_zastepczy.png" width="72px" height="72px" alt="">
+                    <div class="lo-cms-grid__title">Zwrot produktu</div>
+                    <p class="lo-cms-section__desc lo-cms-grid__desc">Chcesz zwrócić lub wymienić zakupiony produkt?</p>
+                    <a class="btn-presta lo-cms-grid__btn" href="#">Zwróć produkt</a>
+                </div>
+                <div class="lo-cms-grid__item">
+                    <img class="lo-cms-grid__icon" src="/img/door_to_door.png" width="72px" height="72px" alt="">
+                    <div class="lo-cms-grid__title">Reklamacja</div>
+                    <p class="lo-cms-section__desc lo-cms-grid__desc">Napotkałeś problem ze swoim produktem? </p>
+                    <a class="btn-presta lo-cms-grid__btn" href="#">Zgłoś reklamację</a>
+                </div>
+            </div>
+        </section>
+        <section class="lo-cms-full-width lo-cms-bg lo-cms-block-pd">
+            <section class="lo-cms-content">
+                <div class="lo-cms-txtBlock lo-cms-block-pde-50">
+                    <h3 class="lo-cms-section__title">
+                        Skontaktuj się z nami
+                    </h3>
+                    <p class="lo-cms-section__desc">Masz pytanie? Potrzebujesz pomocy? Zapraszamy do kontaktu z
+                        naszym biurem obsługi klienta.
+                    </p>
+                </div>
+                <div class="lo-cms-buttonsWrapper">
+                    <button class="lo-cms-button lo-cms-button--black" id="loCmsChatSelectBtn" aria-expanded="false" aria-controls="loCmsChatSelect">Chat online</button>
+                    <a class="lo-cms-button" href="mailto:sklep@lionelo.pl">sklep@lionelo.pl</a>
+                    <a class="lo-cms-button" href="tel:+48 61 222 29 80">61 222 29 80</a>
+                </div>
+                <div class="lo-cms-timeInfo">
+                    <div class="lo-cms-timeInfo__item">
+                        <p class="lo-cms-timeInfo__info">Infolinia sklepu internetowego oraz obsługa zamówień: </p>
+                        <p class="lo-cms-timeInfo__houors">10:00 - 16:00</p>
+                        <p class="lo-cms-timeInfo__days">od poniedziałku do piątku </p>
+                    </div>
+                    <div class="lo-cms-timeInfo__item">
+                        <p class="lo-cms-timeInfo__info">Infolinia wsparcia technicznego </p>
+                        <p class="lo-cms-timeInfo__houors">10:00 - 14:00</p>
+                        <p class="lo-cms-timeInfo__days">od poniedziałku do piątku </p>
+
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="lo-cms-content lo-cms-formBlock lo-cms-block-pd">
+            <h3 class="lo-cms-section__title">
+                Kontakt biznesowy
+            </h3>
+            <div class="lo-cms-formContent lo-cms-margin-be-45">
+                <div class="lo-cms-formDesc__wrapper">
+                    <p class="lo-cms-formDesc">Jesteśmy marką obecną w wielu krajach Europy, stale rozwijającą ofertę
+                        dla rodzin z dziećmi. Jeśli chcesz zostać naszym partnerem biznesowym lub dystrybutorem,
+                        zapraszamy do kontaktu. Oferujemy sprawdzony asortyment, wsparcie marketingowe i partnerskie
+                        podejście do współpracy.</p>
+                </div>
+                <div class="lo-cms-addInfo__wrapper">
+                    <p class="lo-cms-addInfo">Wypełnij formularz poniżej — nasz dział B2B skontaktuje się z Tobą, aby
+                        przedstawić szczegóły współpracy.</p>
+                </div>
+            </div>
+
+        </section>
+        <div class="lo-cms-overlay"></div>
+        <div class="lo-cms-popup__wrapper js-loCmsPopUp" id="loCmsNewMsgForm" aria-hidden="true" role="dialog"
+            aria-labelledby="loCmsNewMsgBtn">
+            <div class="lo-cms-popup">
+                <div class="lo-cms-popup__header">
+                    <button class="lo-cms-popup__closeBtn js-loCmsPopUpCloseBtn" aria-expanded="true"
+                        aria-controls="loCmsNewMsgForm">
+                        <i class="material-icons lo-cms-popup__closeIcon"></i>
+                    </button>
+                    <h3 class="lo-cms-section__title">
+                        Formularz kontaktowy</h3>
+                    <p class="lo-cms-section__desc">Zostaw nam wiadomość, odpowiemy najszybciej, jak to możliwe.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="lo-cms-popup__wrapper js-loCmsPopUp" id="loCmsChatSelect" aria-hidden="true" role="dialog"
+            aria-labelledby="loCmsChatSelectBtn">
+            <div class="lo-cms-popup lo-cms-popup--chats">
+                <div class="lo-cms-popup__header">
+                    <button class="lo-cms-popup__closeBtn js-loCmsPopUpCloseBtn" aria-expanded="true"
+                        aria-controls="loCmsNewMsgForm">
+                        <i class="material-icons lo-cms-popup__closeIcon"></i>
+                    </button>
+                    <h3 class="lo-cms-section__title"> Wybierz formę kontatku na chacie</h3>
+                </div>
+                <div class="lo-cms-grid lo-cms-grid--chats lo-cms-margin-be-45">
+                    <div class="lo-cms-grid__item">
+                        <img class="lo-cms-grid__icon" src="/img/messenger.png" width="72px" height="72px" alt="">
+                        <div class="lo-cms-grid__title">Facebook messenger</div>
+                        <a class="btn-presta lo-cms-grid__btn" href="#">Rozpocznij rozmowę</a>
+                    </div>
+                    <div class="lo-cms-grid__item">
+                        <img class="lo-cms-grid__icon" src="/img/whatsapp.png" width="72px" height="72px" alt="">
+                        <div class="lo-cms-grid__title">WhatsApp chat</div>
+                        <a class="btn-presta lo-cms-grid__btn" href="#">Rozpocznij rozmowę</a>
+                    </div>
+                </div>
+                <p class="lo-cms-section__desc lo-cms-popup__statement">Korzystając z opcji Zadaj pytanie (Messenger) oraz Chat on WhatsApp zgadzasz się na przetwarzanie swoich danych osobowych przez BrandLine Group Sp. z o.o. z siedzibą w Poznaniu ul. Kręglewskiego 1 w celu udzielenia odpowiedzi na wiadomości przesyłane drogą elektroniczną oraz zgadzasz się z polityką prywatności podmiotów świadczących usługę. Więcej: <a href="https://www.whatsapp.com/legal/" target="_blank" rel="noopener">https://www.whatsapp.com/legal/</a> oraz <a href="https://www.messenger.com/privacy" target="_blank" rel="noopener">https://www.messenger.com/privacy</a>.</p>
+            </div>
+        </div>
+
+    </section>
+</body>
+
+</html>
