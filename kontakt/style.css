@@ -1365,7 +1365,7 @@ html:has(.lo-cms-mothersday){
     @media (width < 1440px) {
         padding-block: clamp(1.25rem, -0.8757rem + 5.7647vw, 4.3125rem);
         padding-inline: clamp(1.25rem, -1.9169rem + 8.5882vw, 5.8125rem);
-        gap: clamp(1.875rem, -1.3787rem + 8.8235vw, 6.5625rem);
+        gap: clamp(0.625rem, -3.4963rem + 11.1765vw, 6.5625rem);
     }
 
     @media (width < 590px) {
@@ -1375,15 +1375,20 @@ html:has(.lo-cms-mothersday){
 }
 
 .lo-cms-mothersday .lo-cms-header__logoWrapper {
-       flex-wrap: nowrap;
+    flex-wrap: nowrap;
     justify-content: flex-start;
-    align-items: flex-start;
+    align-items: center;
+    flex-direction: row;
+
+    @media (width < 590px) {
+        justify-content: space-between;
+    }
 }
 
 
 .lo-cms-mothersday .lo-cms-header__logoWrapper .lo-cms-header__logo {
     @media (width < 1440px) {
-        max-width: clamp(7.5rem, 0.8625rem + 18vw, 17.0625rem);
+        max-width: clamp(5.5rem, 2.1964rem + 16.5179vw, 17.0625rem);
     }
 
     @media (width < 590px) {
@@ -1444,29 +1449,29 @@ html:has(.lo-cms-mothersday){
 }
 
 #lo-cms-infoPage.lo-cms-mothersday .lo-cms-section__title {
-    font-size: 48px;
+    font-size: 44px;
     font-weight: 700;
     color: #555766;
 
     @media (768px <=width < 1440px) {
-        font-size: clamp(1.75rem, 0.3214rem + 2.9762vw, 3rem);
+        font-size: clamp(1.5rem, 0.0714rem + 2.9762vw, 2.75rem);
     }
 
     @media (width < 768px) {
-        font-size: clamp(1.5rem, 1.3214rem + 0.8929vw, 1.75rem);
+        font-size: clamp(1.25rem, 0.8929rem + 1.7857vw, 1.75rem);
     }
 }
 
 #lo-cms-infoPage.lo-cms-mothersday .lo-cms-section__desc {
     color: #555766;
-    font-size: 24px;
+    font-size: 20px;
 
     @media (768px <=width < 1440px) {
-        font-size: clamp(0.8125rem, 0.0268rem + 1.6369vw, 1.5rem);
+        font-size: clamp(0.8125rem, 0.3125rem + 1.0417vw, 1.25rem);
     }
 
     @media (width < 768px) {
-        font-size: 16px;
+        font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem);
     }
 }
 
@@ -1577,12 +1582,12 @@ html:has(.lo-cms-mothersday){
 }
 
 .lo-cms-mothersday .lo-cms-badge {
-    position: absolute;
-    right: -15px;
-    top: 20%;
-    background: #555766;
-    border-radius: 15px 0 0 15px;
-    padding: 23px;
+    position: relative;
+    /* right: -15px; */
+    /* top: 20%; */
+    background: transparent;
+    /* border-radius: 15px 0 0 15px; */
+    /* padding: 23px; */
     display: flex;
     flex-wrap: nowrap;
     align-items: flex-start;
@@ -1594,7 +1599,11 @@ html:has(.lo-cms-mothersday){
     font-size: 11px;
     font-weight: 400;
     line-height: 1.1;
-    color: #fff;
+    color: #616160;
+
+    @media (width < 590px) {
+        font-size: 8px;
+    }
 
 }
 
@@ -1604,16 +1613,20 @@ html:has(.lo-cms-mothersday){
     flex-wrap: nowrap;
     align-items: flex-start;
     justify-content: flex-start;
-    border-inline-start: 1px solid #fff;
+    border-inline-start: 1px solid #616160;
     padding-inline-start: 8px;
     margin-inline-start: 8px;
 }
 
 .lo-cms-mothersday .lo-cms-badge-itemRight span {
-    font-size: 19px;
+    font-size: 16px;
     font-weight: 700;
     line-height: 1;
-    color: #fff;
+    color: #616160;
+
+    @media (width < 590px) {
+        font-size: 14px;
+    }
 }
 
 .lo-cms-mothersday .lo-cms-badge-itemRight span:nth-child(2) {
@@ -1680,6 +1693,7 @@ html:has(.lo-cms-mothersday){
 
     @media (width < 768px) {
         width: min(469px, 100%);
+        padding-inline: 22px;
     }
 }
 
@@ -1880,6 +1894,10 @@ html:has(.lo-cms-mothersday){
     overflow: hidden;
     display: grid;
     position: relative;
+}
+
+.lo-cms-mothersday .lo-cms-banner-thumbnail {
+    width: 100%;
 }
 
 .lo-cms-mothersday .lo-cms-mobileBrake {
