@@ -40,3 +40,65 @@ const closePopUp = () => {
 };
 
 closePopUp();
+
+const loCmsLoadBunnyPlayerApi = () => {
+    if (window.playerjs) {
+        return Promise.resolve();
+    }
+
+    if (window.loCmsBunnyPlayerApiLoading) {
+        return window.loCmsBunnyPlayerApiLoading;
+    }
+
+    window.loCmsBunnyPlayerApiLoading = new Promise((resolve, reject) => {
+        const script = document.createElement("script");
+
+        script.src = "https://assets.mediadelivery.net/playerjs/playerjs-latest.min.js";
+        script.onload = resolve;
+        script.onerror = reject;
+        document.head.appendChild(script);
+    });
+
+    return window.loCmsBunnyPlayerApiLoading;
+};
+
+const initLoCmsBunnyPlayers = () => {
+    const bunnyPlayers = document.querySelectorAll("[data-bunny-player]");
+
+    if (!bunnyPlayers.length) {
+        return;
+    }
+
+    loCmsLoadBunnyPlayerApi().then(() => {
+        bunnyPlayers.forEach(player => {
+            const iframe = player.querySelector("iframe");
+            const poster = player.querySelector(".lo-cms-bunnyPlayer__poster");
+
+            if (!iframe || !poster || player.dataset.bunnyPlayerReady === "true") {
+                return;
+            }
+
+            const bunnyPlayer = new playerjs.Player(iframe);
+            let playRequested = false;
+
+            player.dataset.bunnyPlayerReady = "true";
+
+            bunnyPlayer.on("ready", () => {
+                if (playRequested) {
+                    bunnyPlayer.play();
+                }
+            });
+
+            bunnyPlayer.on("play", () => {
+                player.classList.add("is-playing");
+            });
+
+            poster.addEventListener("click", () => {
+                playRequested = true;
+                bunnyPlayer.play();
+            });
+        });
+    });
+};
+
+initLoCmsBunnyPlayers();
