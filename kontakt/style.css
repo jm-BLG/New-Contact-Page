@@ -1992,6 +1992,7 @@ html:has(.lo-cms-mothersday) {
 
 .lo-cms-feedingweek {
     background: #F5F5F5;
+    padding-block-start: 0;
 }
 
 .lo-cms-feedingweek .lo-cms-header__picture,
@@ -2080,13 +2081,19 @@ html:has(.lo-cms-mothersday) {
     font-size: 16px;
     font-family: "Red Hat Display", sans-serif;
     letter-spacing: 1%;
-    padding: 15px 45px 15px 25px !important;
+    padding: 17px 25px 15px 25px !important;
+    line-height: 1;
+    height: auto;
+    transition: padding 350ms ease-in;
 
     @media (width < 768px) {
         font-size: clamp(0.75rem, 0.5714rem + 0.8929vw, 1rem);
     }
 }
 
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header .lo-cms-grid__btn:hover {
+    padding: 17px 20px 15px 30px !important;
+}
 
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header .lo-cms-header__picture {
     position: relative;
@@ -2207,7 +2214,24 @@ html:has(.lo-cms-mothersday) {
 }
 
 .lo-cms-feedingweek .lo-cms-ebook .lo-cms-2colBlock {
-    column-gap: 0;
+    gap: 0;
+}
+
+.lo-cms-feedingweek .lo-cms-videoWrapper {
+    border-radius: 0;
+
+    @media (768px <= width) {
+        height: 100%;
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-bunnyPlayer {
+    aspect-ratio: 760 / 742;
+    height: 100%;
+
+    @media (768px <= width) {
+       aspect-ratio: unset;
+    }
 }
 
 .lo-cms-feedingweek .lo-cms-ebook .lo-cms-contentWrapper {
@@ -2238,6 +2262,10 @@ html:has(.lo-cms-mothersday) {
 
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-whyworth .lo-cms-list {
     list-style: none;
+
+    @media (width < 768px) {
+        padding-inline-start: 37px;
+    }
 }
 
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-whyworth .lo-cms-listItem {
@@ -2265,6 +2293,10 @@ html:has(.lo-cms-mothersday) {
     transform: translateY(-50%);
     width: 25px;
     height: 25px;
+
+    @media (width < 768px) {
+        left: -35px;
+    }
 }
 
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-buttonWrapper {
@@ -2274,8 +2306,14 @@ html:has(.lo-cms-mothersday) {
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-grid__btn {
     border: 1px solid #fff;
     background: #AA5097;
+    color: #fff;
+    padding-inline: 25px !important;
+    transition: padding 350ms ease-in;
 }
 
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-grid__btn:hover {
+    padding-inline: 30px 20px !important;
+}
 
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-section__desc {
     font-size: 18px;
@@ -2533,6 +2571,7 @@ html:has(.lo-cms-mothersday) {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: auto;
+        padding-inline: 10px;
     }
 }
 
