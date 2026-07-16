@@ -1319,14 +1319,14 @@ body {
 
 
 /* Mothersday */
-html:has(.lo-cms-mothersday){
+html:has(.lo-cms-mothersday) {
     scroll-behavior: smooth;
 }
 
 .lo-cms-mothersday .lo-cms-mothersday .lo-cms-content {
     width: calc(100% - 40px);
 
-        @media (width < 768px) {
+    @media (width < 768px) {
         width: min(469px, 100%);
     }
 }
@@ -1633,7 +1633,7 @@ html:has(.lo-cms-mothersday){
     margin-inline-start: 15px;
 }
 
-.lo-cms-mothersday .lo-cms-campaign-lead{
+.lo-cms-mothersday .lo-cms-campaign-lead {
     scroll-margin-top: 20px;
 }
 
@@ -1660,7 +1660,7 @@ html:has(.lo-cms-mothersday){
         font-size: clamp(1.25rem, 0.3929rem + 1.7857vw, 2rem);
     }
 
-        @media (width < 768px) {
+    @media (width < 768px) {
         font-size: clamp(1.375rem, 1.1964rem + 0.8929vw, 1.625rem);
     }
 }
@@ -1726,8 +1726,8 @@ html:has(.lo-cms-mothersday){
 
     @media (width < 768px) {
         grid-template-areas:
-        "txt"
-        "img";
+            "txt"
+            "img";
         overflow: hidden;
         border-radius: 10px;
     }
@@ -1764,7 +1764,7 @@ html:has(.lo-cms-mothersday){
 }
 
 .lo-cms-mothersday .lo-cms-bannerSection .lo-cms-section__desc {
-        width: min(41ch, 100%);
+    width: min(41ch, 100%);
     text-align: center;
     display: block;
     margin-inline: auto;
@@ -1786,7 +1786,8 @@ html:has(.lo-cms-mothersday){
     gap: 10px;
 }
 
-.lo-cms-mothersday .lo-cms-preheader {
+.lo-cms-mothersday .lo-cms-preheader,
+.lo-cms-feedingweek .lo-cms-preheader {
     font-size: 16px;
     font-weight: 400;
     text-transform: uppercase;
@@ -1833,9 +1834,7 @@ html:has(.lo-cms-mothersday){
     text-align: left;
 }
 
-.lo-cms-full-width.lo-cms-support {
-    
-}
+.lo-cms-full-width.lo-cms-support {}
 
 
 .lo-cms-mothersday .lo-cms-support .lo-cms-content {
@@ -1857,7 +1856,8 @@ html:has(.lo-cms-mothersday){
 }
 
 
-.lo-cms-mothersday .lo-cms-support .lo-cms-support__img {
+.lo-cms-mothersday .lo-cms-support .lo-cms-support__img,
+.lo-cms-feedingweek .lo-cms-ebook .lo-cms-ebook__img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1886,7 +1886,8 @@ html:has(.lo-cms-mothersday){
     flex-wrap: wrap;
 }
 
-.lo-cms-mothersday .lo-cms-videoWrapper {
+.lo-cms-mothersday .lo-cms-videoWrapper,
+.lo-cms-feedingweek .lo-cms-videoWrapper {
     width: 100%;
     height: auto;
     object-position: left top;
@@ -1896,7 +1897,8 @@ html:has(.lo-cms-mothersday){
     position: relative;
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer {
+.lo-cms-mothersday .lo-cms-bunnyPlayer,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer {
     position: relative;
     width: 100%;
     aspect-ratio: 16 / 9;
@@ -1905,18 +1907,22 @@ html:has(.lo-cms-mothersday){
 }
 
 .lo-cms-mothersday .lo-cms-bunnyPlayer iframe,
-.lo-cms-mothersday .lo-cms-bunnyPlayer__poster {
+.lo-cms-mothersday .lo-cms-bunnyPlayer__poster,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer iframe,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer__poster{
     position: absolute;
     inset: 0;
     width: 100%;
     height: 100%;
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer iframe {
+.lo-cms-mothersday .lo-cms-bunnyPlayer iframe,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer iframe {
     border: 0;
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer__poster {
+.lo-cms-mothersday .lo-cms-bunnyPlayer__poster,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer__poster {
     z-index: 2;
     display: grid;
     place-items: center;
@@ -1926,13 +1932,15 @@ html:has(.lo-cms-mothersday){
     background: #1E1E20;
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer__poster img {
+.lo-cms-mothersday .lo-cms-bunnyPlayer__poster img,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer__poster img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer__play {
+.lo-cms-mothersday .lo-cms-bunnyPlayer__play,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer__play {
     position: absolute;
     width: 48px;
     aspect-ratio: 1;
@@ -1942,7 +1950,8 @@ html:has(.lo-cms-mothersday){
     transition: transform 160ms ease-out, background 160ms ease-out;
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer__play::before {
+.lo-cms-mothersday .lo-cms-bunnyPlayer__play::before,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer__play::before {
     content: "";
     position: absolute;
     top: 50%;
@@ -1952,12 +1961,14 @@ html:has(.lo-cms-mothersday){
     border-inline-start: 14px solid #fff;
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer__poster:hover .lo-cms-bunnyPlayer__play {
+.lo-cms-mothersday .lo-cms-bunnyPlayer__poster:hover .lo-cms-bunnyPlayer__play,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer__poster:hover .lo-cms-bunnyPlayer__play {
     transform: scale(1.06);
     /* background: #fff; */
 }
 
-.lo-cms-mothersday .lo-cms-bunnyPlayer.is-playing .lo-cms-bunnyPlayer__poster {
+.lo-cms-mothersday .lo-cms-bunnyPlayer.is-playing .lo-cms-bunnyPlayer__poster,
+.lo-cms-feedingweek .lo-cms-bunnyPlayer.is-playing .lo-cms-bunnyPlayer__poster {
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -1969,9 +1980,670 @@ html:has(.lo-cms-mothersday){
 }
 
 .lo-cms-mothersday .lo-cms-mobileBrake {
-    display: none
-    ;
+    display: none;
+
     @media (width < 768px) {
         display: inline;
+    }
+}
+
+
+/* Tydzien karmienia */
+
+.lo-cms-feedingweek {
+    background: #F5F5F5;
+}
+
+.lo-cms-feedingweek .lo-cms-header__picture,
+.lo-cms-feedingweek .lo-cms-header__content {
+    grid-column: unset;
+    grid-row: unset;
+    z-index: 1;
+}
+
+.lo-cms-feedingweek .lo-cms-header .lo-cms-header__content {
+    background: #F0DDD9;
+
+    @media (width < 768px) {
+        order: 2;
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-header .lo-cms-2colBlock {
+    gap: 0;
+}
+
+.lo-cms-feedingweek .lo-cms-header .lo-cms-header__body {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 69px 93px;
+    justify-items: left;
+    gap: 30px;
+
+    @media (768px <=width < 1024px) {
+        padding: clamp(3.125rem, -0.4375rem + 7.4219vw, 4.3125rem) clamp(3.125rem, -4.9375rem + 16.7969vw, 5.8125rem);
+    }
+
+    @media (width < 768px) {
+        padding: clamp(1.875rem, 0.1339rem + 8.7054vw, 4.3125rem) clamp(1.875rem, -0.9375rem + 14.0625vw, 5.8125rem);
+    }
+}
+
+
+.lo-cms-feedingweek .lo-cms-header .lo-cms-header__title {
+    text-align: left;
+    font-size: 55px;
+    font-weight: 600;
+    line-height: 1.2;
+    color: #403F3F;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(2.5rem, -0.3125rem + 5.8594vw, 3.4375rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1.875rem, 0.7589rem + 5.5804vw, 3.4375rem);
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-header .lo-cms-header__title span {
+    color: #AA5097;
+    font-style: italic;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header__subtitle {
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.6;
+    text-align: left;
+    color: #403F3F;
+    margin: 0;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(1.25rem, 0.5rem + 1.5625vw, 1.5rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1.25rem, 1.0714rem + 0.8929vw, 1.5rem);
+    }
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header .lo-cms-grid__btn {
+    border: 1px solid #AA5095;
+    background: #AA5095;
+    color: #fff;
+    font-size: 16px;
+    font-family: "Red Hat Display", sans-serif;
+    letter-spacing: 1%;
+    padding: 15px 45px 15px 25px !important;
+
+    @media (width < 768px) {
+        font-size: clamp(0.75rem, 0.5714rem + 0.8929vw, 1rem);
+    }
+}
+
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header .lo-cms-header__picture {
+    position: relative;
+
+    @media (width < 768px) {
+        order: 1;
+    }
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header .lo-cms-header__img {
+    height: 100%;
+    object-fit: cover;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header .lo-cms-header__pictureOverlay {
+    background: #FFFFFF;
+    opacity: 0.7;
+    border: none;
+    border-radius: 20px;
+    padding: 32px 48px;
+    position: absolute;
+    left: 6%;
+    bottom: 15%;
+    color: #000;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 1%;
+
+    @media (width < 768px) {
+        padding: clamp(0.625rem, -0.3571rem + 4.9107vw, 2rem) clamp(1.25rem, 0rem + 6.25vw, 3rem);
+    }
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-header .lo-cms-header__pictureOverlay span {
+    color: #FF4D1C;
+}
+
+.lo-cms-feedingweek .lo-cms-contentWrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.lo-cms-feedingweek .lo-cms-products .lo-cms-contentWrapper,
+.lo-cms-feedingweek .lo-cms-manifest .lo-cms-contentWrapper {
+    align-items: center;
+}
+
+.lo-cms-feedingweek .lo-cms-content {
+    width: 100%;
+}
+
+
+.lo-cms-feedingweek .lo-cms-articles .lo-cms-content,
+.lo-cms-feedingweek .lo-cms-experts .lo-cms-content,
+.lo-cms-feedingweek .lo-cms-whyworth .lo-cms-content  {
+    width: calc(100% - 140px);
+
+    @media (width < 1440px) {
+        width: calc(100% - (clamp(2.5rem, -4.6429rem + 14.881vw, 8.75rem)));
+    }
+}
+
+
+.lo-cms-feedingweek .lo-cms-preheader {
+    color: #AA5097;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-section__title {
+    font-size: 42px;
+    font-family: "Red Hat Display", sans-serif;
+    font-weight: 500;
+    color: #403F3F;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(2.25rem, 1.125rem + 2.3438vw, 2.625rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1.875rem, 1.3393rem + 2.6786vw, 2.625rem);
+    }
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-products .lo-cms-section__title,
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-manifest .lo-cms-section__title {
+    width: min(23ch, 100%);
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-whyworth .lo-cms-section__title {
+    text-align: left;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-manifest {
+    padding-block: 80px 89px;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-section__title span {
+    color: #AA5097;
+    font-style: italic;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-experts .lo-cms-section__desc {
+    font-size: 24px;
+    color: #403F3F;
+    width: min(741px, 100%);
+    text-align: left;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(1.25rem, 0.5rem + 1.5625vw, 1.5rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1.1875rem, 0.9643rem + 1.1161vw, 1.5rem);
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-ebook .lo-cms-2colBlock {
+    column-gap: 0;
+}
+
+.lo-cms-feedingweek .lo-cms-ebook .lo-cms-contentWrapper {
+    background: #AA5097;
+    color: #fff;
+    padding: 98px 58px 70px 130px;
+    gap: 15px;
+
+    @media (768px <=width < 1024px) {
+        padding: clamp(2.8125rem, -7.125rem + 20.7031vw, 6.125rem) clamp(1.875rem, -3.375rem + 10.9375vw, 3.625rem) clamp(3.125rem, -0.625rem + 7.8125vw, 4.375rem) clamp(3.125rem, -11.875rem + 31.25vw, 8.125rem);
+    }
+
+    @media (width < 768px) {
+        padding: clamp(3.125rem, 0.9821rem + 10.7143vw, 6.125rem) clamp(0.9375rem, -0.9821rem + 9.5982vw, 3.625rem) clamp(3.125rem, 2.2321rem + 4.4643vw, 4.375rem) clamp(0.9375rem, -4.1964rem + 25.6696vw, 8.125rem);
+    }
+
+}
+
+.lo-cms-feedingweek .lo-cms-ebook .lo-cms-preheader {
+    color: #fff;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-section__title,
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-section__desc {
+    color: #fff;
+    text-align: left;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-whyworth .lo-cms-list {
+    list-style: none;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-whyworth .lo-cms-listItem {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 2.2;
+    letter-spacing: 1%;
+    color: #AA5097;
+    position: relative;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(1rem, 0.625rem + 0.7813vw, 1.125rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1rem, 0.9107rem + 0.4464vw, 1.125rem);
+    }
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-whyworth .lo-cms-listItem::before {
+    content: url("/kontakt/img/list-mark.png");
+    position: absolute;
+    left: -38px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 25px;
+    height: 25px;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-buttonWrapper {
+    margin-block-start: auto;
+}
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-grid__btn {
+    border: 1px solid #fff;
+    background: #AA5097;
+}
+
+
+#lo-cms-infoPage.lo-cms-feedingweek .lo-cms-ebook .lo-cms-section__desc {
+    font-size: 18px;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    width: 100%;
+    margin-block-start: 12px;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(1rem, 0.625rem + 0.7813vw, 1.125rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1rem, 0.9107rem + 0.4464vw, 1.125rem);
+    }
+}
+
+
+
+.lo-cms-feedingweek .lo-cms-grid {
+    gap: 24px 36px;
+    flex-wrap: wrap;
+}
+
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-grid__item {
+    padding: 0;
+    background: #F8F6F3;
+    flex: 1 1 45%;
+    height: auto;
+
+    @media (width < 768px) {
+        flex: 1 1 55%;
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-grid__item--light {
+    background: #FFDFD8;
+}
+
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-contentWrapper {
+    padding: 66px 45px 45px;
+    height: 100%;
+    gap: 20px;
+
+    @media (width < 768px) {
+        padding: clamp(2.5rem, 1.3393rem + 5.8036vw, 4.125rem) clamp(1.25rem, 0.1339rem + 5.5804vw, 2.8125rem) 45px;
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-preheader {
+    color: #FF4D1C;
+}
+
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-grid__itemTitle {
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 1%;
+    line-height: 1.5;
+    color: #141414;
+    margin: 0;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(1.25rem, 0.5rem + 1.5625vw, 1.5rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1.1875rem, 0.9643rem + 1.1161vw, 1.5rem);
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-grid__itemTesxt,
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-grid__itemLink {
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: 1%;
+    line-height: 1.5;
+    text-wrap: balance;
+    margin: 0;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(0.875rem, 0.5rem + 0.7813vw, 1rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(0.875rem, 0.7857rem + 0.4464vw, 1rem);
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-grid .lo-cms-grid__itemLink {
+    letter-spacing: 2%;
+    color: #AA5097;
+    line-height: 1.3;
+    text-decoration: none;
+    margin-block-start: auto;
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-content {
+    width: calc(100% - 40px);
+    margin-inline: auto;
+
+    @media (width < 768px) {
+        width: 100%;
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 15px;
+
+    @media (width < 768px) {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__item {
+    flex: 0 1 405px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow: hidden;
+    border: none;
+    border-radius: 18px;
+    height: auto;
+    position: relative;
+    z-index: 1;
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__item .lo-cms-wrapper {
+    position: relative;
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemImg {
+    width: 100%;
+    filter: brightness(0.8);
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemBtn {
+    position: absolute;
+    left: 4%;
+    bottom: 8%;
+    border: 1px solid #fff;
+    border-radius: 16px;
+    background: transparent;
+    color: #fff;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 2%;
+    text-decoration: none;
+    padding: 8px 12px;
+    transition: padding 350ms ease-in;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(0.875rem, 0.5rem + 0.7813vw, 1rem);
+    }
+
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemLink {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+}
+
+.lo-cms-feedingweek .lo-cms-productGrid__item:has(.lo-cms-productGrid__itemLink:hover) .lo-cms-productGrid__itemBtn {
+    @media (768px <=width) {
+        padding-inline-start: 20px;
+    }
+
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemBody {
+    background: #fff;
+    padding: 40px;
+    height: 100%;
+
+    @media (768px <=width < 1024px) {
+        padding: clamp(1.5625rem, -1.25rem + 5.8594vw, 2.5rem);
+    }
+
+    @media (width < 768px) {
+        padding: clamp(1.5625rem, 0.8929rem + 3.3482vw, 2.5rem);
+    }
+
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemTitle,
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemText {
+    font-family: "Red Hat Display", sans-serif;
+    text-align: left;
+    color: #4E4E4E;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    margin: 0;
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemTitle {
+    font-size: 26px;
+    font-weight: 500;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(1.375rem, 0.625rem + 1.5625vw, 1.625rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1.375rem, 1.1964rem + 0.8929vw, 1.625rem);
+    }
+}
+
+.lo-cms-feedingweek .lo-cms-productsList .lo-cms-productGrid__itemText {
+    font-size: 20px;
+    font-weight: 400;
+
+    @media (768px <=width < 1024px) {
+        font-size: clamp(1rem, 0.25rem + 1.5625vw, 1.25rem);
+    }
+
+    @media (width < 768px) {
+        font-size: clamp(1.0625rem, 0.9286rem + 0.6696vw, 1.25rem);
+    }
+}
+
+
+.lo-cms-feedingweek .lo-cms-experts,
+.lo-cms-feedingweek .lo-cms-articles,
+.lo-cms-feedingweek .lo-cms-author {
+    background: #fff;
+}
+
+.lo-cms-feedingweek .lo-cms-experts {
+    padding-block-start: 80px;
+}
+
+.lo-cms-feedingweek .lo-cms-articles {
+    padding-block-end: 45px;
+}
+
+.lo-cms-author {
+    /* display: grid; */
+    /* grid-template-columns: repeat(12, minmax(0, 1fr)); */
+    /* grid-template-rows: 1fr; */
+    min-height: 600px;
+    position: relative;
+
+    @media (width < 768px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+.lo-cms-author__img {
+    /* grid-column: 4 / 10; */
+    /* grid-row: 1 / -1; */
+    width: 100%;
+    max-width: 554px;
+    min-width: 400px;
+    margin-inline: auto;
+    display: block;
+    transform: translateY(-45px);
+    z-index: 1;
+
+    @media (width < 768px) {
+        grid-column: auto;
+        grid-row: 1 / 2;
+        min-width: unset
+    }
+}
+
+.lo-cms-author__bio {
+    /* grid-column: 2 / 7; */
+    /* grid-row: 1 / -1; */
+    /* position: relative; */
+    z-index: 2;
+    font-size: 24px;
+    color: #000;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    text-align: left;
+    font-weight: 400;
+    align-self: center;
+    position: absolute;
+    left: 4%;
+    top: 50%;
+    transform: translateY(-50%);
+
+    @media (768px <= width < 1440px) {
+        font-size: clamp(1rem, 0.4286rem + 1.1905vw, 1.5rem);
+    }
+
+    @media (width < 768px) {
+        position: relative;
+        grid-column: unset;
+        grid-row: 3 / 4;
+        text-align: right;
+        transform: translateY(-55px);
+        left: unset;
+        top: unset;
+        font-size: clamp(0.9375rem, 0.5357rem + 2.0089vw, 1.5rem);
+    }
+}
+
+.lo-cms-author__bio span {
+    display: block;
+}
+
+.lo-cms-author__bio .lo-cms-author__title {
+    color: #AA5097;
+    font-weight: 500;
+}
+
+.lo-cms-author__bio .lo-cms-author__name {
+    font-weight: 500;
+}
+
+
+.lo-cms-author__bio .lo-cms-section__desc {
+    font-weight: 300;
+}
+
+.lo-cms-author__quote {
+    /* grid-column: 8 / 12; */
+    /* grid-row: 1 / -1; */
+    /* position: relative; */
+    z-index: 3;
+    align-self: self-end;
+    background: #FFDFD8;
+    padding: 40px 48px;
+    border: none;
+    border-radius: 20px;
+    font-size: 22px;
+    font-weight: 300;
+    line-height: 1.6;
+    letter-spacing: 1%;
+    text-align: left;
+    text-wrap: balance;
+    font-family: "Red Hat Display", sans-serif;
+    margin-block-end: 35px;
+    position: absolute;
+    width: 40%;
+    right: 4%;
+    bottom: 0;
+
+    @media (768px <= width < 1440px) {
+        font-size: clamp(1rem, 0.5714rem + 0.8929vw, 1.375rem);
+        padding: clamp(1.25rem, -0.1786rem + 2.9762vw, 2.5rem) clamp(1.5625rem, -0.0804rem + 3.4226vw, 3rem);
+    }
+
+    @media (width < 768px) {
+        position: relative;
+        grid-column: unset;
+        grid-row: 2 / 3;
+        transform: translateY(-75px);
+        right: unset;
+        bottom: unset;
+        width: min(554px, 100%);
+        margin-inline: auto;
+        padding: clamp(1.25rem, 0.3571rem + 4.4643vw, 2.5rem) 
+        clamp(1.25rem, 0rem + 6.25vw, 3rem);
+        font-size: clamp(1.125rem, 0.9464rem + 0.8929vw, 1.375rem);
     }
 }
