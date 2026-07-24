@@ -2012,6 +2012,30 @@ html:has(.lo-cms-mothersday) {
 
 .lo-cms-feedingweek .lo-cms-header .lo-cms-2colBlock {
     gap: 0;
+    position: relative;
+}
+
+.lo-cms-feedingweek .lo-cms-header .float {
+position: absolute;
+    bottom: -104px;
+    z-index: 3;
+    left: 50%;
+    transform: translateX(-50%);
+
+ @media (768px <=width < 1440px) {
+    height: clamp(25.625rem, 7.1964rem + 38.3929vw, 41.75rem);
+    bottom: clamp(-6.5rem, -2.6161rem + -4.3155vw, -4.6875rem);
+ }
+
+ @media (width < 768px) {
+    bottom: unset;
+    transform: unset;
+    left: unset;
+    right: 10px;
+    top: 13%;
+    height: clamp(12.5rem, -6.25rem + 93.75vw, 38.75rem);
+ }
+
 }
 
 .lo-cms-feedingweek .lo-cms-header .lo-cms-header__body {
@@ -2190,7 +2214,11 @@ html:has(.lo-cms-mothersday) {
 }
 
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-manifest {
-    padding-block: 80px 89px;
+    padding-block: 95px 89px;
+
+    @media (width < 768px) {
+         padding-block: 85px 89px;
+    }
 }
 
 #lo-cms-infoPage.lo-cms-feedingweek .lo-cms-section__title span {
@@ -2498,6 +2526,7 @@ html:has(.lo-cms-mothersday) {
     background: #fff;
     padding: 40px;
     height: 100%;
+    text-wrap: balance;
 
     @media (768px <=width < 1024px) {
         padding: clamp(1.5625rem, -1.25rem + 5.8594vw, 2.5rem);
